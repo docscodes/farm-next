@@ -7,4 +7,5 @@ const layout = ({ children }) => {
     </div>
   );
 };
+
 export default layout;
