@@ -1,4 +1,5 @@
 import { getSession } from "@/actions";
+import CarForm from "@/components/CarForm";
 import { redirect } from "next/navigation";
 
 const page = async () => {
@@ -11,7 +12,7 @@ const page = async () => {
   return (
     <div className="p-4">
       <h1>Private Page</h1>
-      {/* <CarForm /> */}
+      <CarForm />
     </div>
   );
 };
