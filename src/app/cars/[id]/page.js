@@ -6,6 +6,18 @@ export async function generateStaticParams() {
   return cars.map((car) => ({ id: car._id }));
 }
 
+export async function generateMetadata({ params }, parent) {
+  const carId = params.id;
+
+  const car = await fetch(`${process.env.API_URL}/cars/${carId}`).then((res) => res.json());
+
+  const title = `FARM Cars App - ${car.brand} ${car.make} (${car.year})`;
+
+  return {
+    title,
+  };
+}
+
 const CarDetails = async ({ params }) => {
   const carId = params.id;
 
