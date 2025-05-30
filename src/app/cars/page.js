@@ -7,15 +7,15 @@ const Cars = async () => {
     },
   });
 
-  const { cars } = await data.json();
+  const cars = await data.json();
 
   return (
     <>
       <h1>Cars</h1>
       <div>
         {cars.map((car) => (
-          <div key={car.id} className="m-4 bg-white p-2">
-            <Link href={`/cars/${car.id}`}>
+          <div key={car._id} className="m-4 bg-white p-2">
+            <Link href={`/cars/${car._id}`}>
               <p>
                 {car.brand} {car.make} from {car.year}
               </p>
