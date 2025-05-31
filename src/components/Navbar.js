@@ -7,7 +7,7 @@ const Navbar = async () => {
 
   return (
     <nav className="flex justify-between items-center bg-gray-800 p-4">
-      <h1 className="text-white">Farm Cars</h1>
+      <h1 className="text-white">Farm Next</h1>
 
       <div className="flex space-x-4 text-white child-hover:text-yellow-400">
         <Link href="/">Home</Link>
